@@ -6,7 +6,7 @@ Feature: Verify square class card for Student user(Users with 4 or more classes)
         Then User verifies the Realize Dashboard Page
         Then User verifies Class name should be displayed on each of my cards
         Then User verifies Background each of myCards
-        Then class picture set on each class card
+        Then User verifies class picture set on each class card
         Then User verifies rectangular class cards is displayed one in a row or not
         Then User verifies Class avatar with equivalent icon and label,Assignment,Student & Groups,Graph,Programs
         And  User Click the "Pen and Paper" icon
