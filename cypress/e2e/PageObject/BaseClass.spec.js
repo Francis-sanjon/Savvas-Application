@@ -42,9 +42,6 @@ class BaseClass {
         });
       }
       
-
-  
-    
         resetLanguage() {
             let condition = '';
             home.getSetting().then((data) => {
