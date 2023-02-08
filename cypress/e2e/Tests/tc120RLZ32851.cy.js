@@ -1,113 +1,91 @@
-///const data = require('../fixtures/xlsxData.json');
-const { Given, When, And, Then } = require("@badeball/cypress-cucumber-preprocessor")
 
+const { Given, When, And, Then } = require("@badeball/cypress-cucumber-preprocessor")
 import Home from '../PageObject/01_Home.spec'
 import BaseClass from "../PageObject/BaseClass.spec";
 import LoginPage from '../PageObject/LoginPage.spec';
-import Encryptions from '../EncryptionAndDecryption/Encryptions'
-const en=new Encryptions();
+import ProfilePage from '../PageObject/ProfilePage.spec'
+
 const home = new Home();
 const bs = new BaseClass();
-const loginPage = new LoginPage();
-before('Before', () => {
-    cy.log('this is before block')
-    cy.task('readXlsx', { file: 'cypress/fixtures/excelData.xlsx', sheet: "Sheet1" }).then((rows) => {
-      let rowsLength = rows.length;
-      cy.writeFile("cypress/fixtures/xlsxData.json", { rows })
-      cy.writeFile("cypress/fixtures/xlsxData.txt", { rows })
-  
-   })
+const loginPage = new LoginPage()
+const profilePage = new ProfilePage()
+describe('', () => {
+  Given("User launche the Realize login Page", () => {
+    cy.visit('/')
+    Cypress.on('uncaught:exception', (err, runnable) => {
+              return false
+     })
+  })
+  When("User logins Savvas Appllication with valid {string} and valid {string}", async(username, password) => {
+    bs.savvasLogin(username, password)
+  })
+  Then('User verifies the Realize Dashboard Page', () => {
+    cy.url().should('include', 'dashboard');
+  })
+  Then('User verifies Help Icon Present in TopNavbar with Question Mark Icon enrolled with Circle Icon or not', () => {
+    home.getHelpIconColor().should('be.visible')
+  })
+  Then('User verifies Black Colour question mark button should present in Top Navbar with White background colour', () => {
+    home.getHelpIconColor().should('have.css', 'color', 'rgb(0, 0, 0)')
   })
 
-describe("User logins Savvas Appllication with valid '<username>' and valid '<password>'", () => {
-    
-Given('User verifies the Realize Dashboard Page',()=>{
+  And('User Clicks Help Icon', () => {
+    home.getHelpIconColor().click()
+  })
+  Then('User Verifies Drop Down background colour', () => {
+    home.getPopUp().should('have.css', 'color', 'rgb(33, 37, 41)')
+  })
+  
+  Then('User verifies Prime Shade on Help Icon when mouseOver', () => {
 
-})
-Then('User verifies Help Icon Present in TopNavbar with Question Mark Icon enrolled with Circle Icon or not',()=>{
-  
-})
-Then('User verifies Black Colour question mark button should present in Top Navbar with White background colour',()=>{
-  
-})
-    
-And('User Clicks Help Icon',()=>{
+  })
+  Then('User Verifies Search Text Box apperars on the Top of the Drop Down Values', () => {
+    home.getInputBox().should('be.visible')
+  })
+  And('User Enters some value in Textbox', () => {
+    home.getInputBox().click().type('classes',{force:true})
+  })
 
-})
-Then('User Verifies Drop Down background colour',()=>{
-  
-})
-Then('User verifies DropDown values background colour should displayed in White colour',()=>{
-  
-})
-    
-Then('User verifies Prime Shade on Help Icon when mouseOver',()=>{
+  And('User hits enter', () => {
+    home.getInputBox().click().type('{enter}')
+  })
+  Then('User verifies the Result of Textbox', () => {
+    home.getPopUp().should('be.visible')
+  })
+  And('User close the popup', () => {
+    home.getPopUpCloseBtn().click()
+  })
 
-})
-Then('User Verifies Search Text Box apperars on the Top of the Drop Down Values',()=>{
-  
-})
-And('User Enters some value in Textbox',()=>{
-  
-})
-    
-And('User hits enter',()=>{
+  And('User clicks Help for this Page', () => {
+    home.getHelpForThisPage().click()
+  })
+  Then('User verifies the result for help for this page option', () => {
+    cy.get('[class="floatingModal hydrated"]').should('be.visible')
+  })
 
-})
-Then('User verifies the Result of Textbox',()=>{
-  
-})
-And('User close the popup',()=>{
-  
-})
-    
-And('User clicks Help Icon',()=>{
+ And('User clicks Program Training option', () => {
+  bs.windowHandle(home.getProgramTraining())
+  })
 
-})
-And('User clicks Help for this Page',()=>{
-  
-})
-Then('User verifies the result for help for this page option',()=>{
-  
-})
-    
-And('User close the popup',()=>{
-
-})
-And('User clicks Help Icon',()=>{
-  
-})
-And('User clicks Program Training option',()=>{
-  
-})
-    
-Then('User verifies the url for Program Training',()=>{
-
-})
-And('User navigating to home page',()=>{
-  
-})
-And('User clicks Help Icon',()=>{
-  
-})
-    
-And('User clicks Technical Support option',()=>{
-
-})
-Then('User verifies the url for Technical Support',()=>{
-  
-})
-And('User navigating to home page',()=>{
-  
-})
-And('User clicks Help Icon',()=>{
-  
-})
-And('User clicks Contact a Program Specialist option',()=>{
-  
-})
-Then('User verifies the url for Contact a Program Specialist',()=>{
-  
-})
+  Then('User verifies the url for Program Training', () => {
+    cy.url().should('include', 'https://mysavvastraining.com/')
+  })
+  And('User navigating to home page', () => {
+    cy.go('back')
+  })
+ 
+  And('User clicks Technical Support option', () => {
+    bs.windowHandle(home.getTechnicalSupport())
+  })
+  Then('User verifies the url for Technical Support', () => {
+    cy.url().should('include', 'support/s/contactsupport')
+  })
+ 
+    And('User clicks Contact a Program Specialist option', () => {
+      bs.windowHandle(home.getProgramSpecialist())
+  })
+  Then('User verifies the url for Contact a Program Specialist', () => {
+    cy.url().should('include', 'https://mysavvastraining.com/')
+  })
 
 })

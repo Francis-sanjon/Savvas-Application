@@ -1,7 +1,8 @@
 # Test Case-04
 Feature: Verify clicking on the Rectangular class card title navigates to the assignment listing page of that class for Teacher user
 
-    Scenario:Verify clicking on the Rectangular class card title navigates to the assignment listing page of that class for Teacher user
+    Scenario Outline:Verify clicking on the Rectangular class card title navigates to the assignment listing page of that class for Teacher user
+        Given User launche the Realize login Page
         When User logins Savvas Appllication with valid '<username>' and valid '<password>'
         Then User verifies the Realize Dashboard Page
         And User Mouse hover on the class card title
@@ -14,4 +15,4 @@ Feature: Verify clicking on the Rectangular class card title navigates to the as
 
         Examples:
             | username                      | password    |
-            | MSuite49win10chrome_teacher07 | testing123$ |
+            | MSuite49win10chrome_teacher04 | testing123$ |

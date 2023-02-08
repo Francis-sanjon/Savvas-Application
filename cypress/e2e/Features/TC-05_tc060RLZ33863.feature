@@ -1,7 +1,8 @@
 # Test Case-05
 Feature: Verify square class card for Student user(Users with 4 or more classes)
 
-    Scenario:Verify square class card for Student user(Users with 4 or more classes)
+    Scenario Outline:Verify square class card for Student user(Users with 4 or more classes)
+        Given User launche the Realize login Page
         When User logins Savvas Appllication as Student with valid '<username>' and valid '<password>'
         Then User verifies the Realize Dashboard Page
         Then User verifies Class name should be displayed on each of my cards

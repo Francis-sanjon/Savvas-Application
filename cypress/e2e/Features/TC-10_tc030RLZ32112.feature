@@ -2,8 +2,9 @@
 # Test Case-10
 Feature: Verify rectangular/square class card based on screen resolution for teacher user
 
-    Scenario:Verify rectangular/square class card based on screen resolution for teacher user
-        When User logins Savvas Appllication as Teacher with valid '<username>' and valid '<password>'
+    Scenario Outline:Verify rectangular/square class card based on screen resolution for teacher user
+          Given User launche the Realize login Page
+        When User logins Savvas Appllication As Teacher with valid '<username>' and valid '<password>'
         Then User verifies the Realize Dashboard Page
         Then User verifies rectangular class card is displayed in full browser window
         And User Change bowser resolution to 767 and verify mobile class card

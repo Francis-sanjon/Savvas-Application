@@ -24,7 +24,8 @@ class ProfilePage {
       return cy.get('[class="gridCard__text"]').eq(2)
    }
    getPrograms() {
-      return cy.get('[class="dropdown-text"]').eq(0)
+    return cy.get('[class="dropdown-text"]').eq(0)
+      //return cy.get('#program-dropdown-15id > a > .dropdown-text')
    }
    getStudentName(){
       return cy.get('#studentName')
@@ -53,6 +54,9 @@ class ProfilePage {
    getGradesMenu() {
       return cy.get('.header__navbar_student').shadow().find('#grades')
       
+   }
+   getEllipsis(){
+      return cy.get('.header__navbar_student').shadow().find('[data-utility-id="profile"]')
    }
 
 }

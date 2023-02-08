@@ -41,6 +41,9 @@ class Home {
     getProfileName() {
       return cy.get('.header__navbar_student').shadow().find('[data-utility-id="profile"]')
     }
+    getSignOutBtn() {
+      return cy.get('.header__navbar').shadow().find('[class="avatar-dropdown hydrated"]').shadow().find('[data-id="signOut"]')
+    }
   getSetting() {
     return cy.get('.header__navbar').shadow().find('[class="avatar-dropdown hydrated"]').shadow().find('[data-id="settings"]')
   }
@@ -65,7 +68,12 @@ getClassCardHeader(){
   getClassContainer(){
     return  cy.get('.classInfiniteScroll')
   }
- 
+  getEllipsis(){
+    return cy.get('.header__navbar_student').shadow().find('.platform__navbar--profileUtility').shadow().find('[class="utility__item--userName"]')
+ }
+ getPopUpPrgm(){
+  return cy.get('[class="programs-list"]')
+ }
 
 }
 export default Home
