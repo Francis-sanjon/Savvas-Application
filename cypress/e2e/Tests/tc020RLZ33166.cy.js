@@ -31,6 +31,10 @@ describe('', () => {
                 profilePage.getEnglish().click()
                 // cy.get('.ng-binding').eq(21).click()
                 profilePage.getSaveBtn().click()
+                cy.get('.message-container').then((data) => {
+                    let msg = data.text();
+                    cy.log(msg)
+                })
                 // cy.wait(10000)
                 profilePage.getRealizeImg().click()
                 home.getProfileIcon()

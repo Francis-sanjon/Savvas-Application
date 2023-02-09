@@ -11,6 +11,7 @@ const profilePage = new ProfilePage()
 describe('', () => {
     Then('User logins Savvas Appllication as Student with valid {string} and valid {string}',(username,password)=>{
       bs.savvasLogin(username,password)
+      cy.viewport(1900,1080)
     })
   
     Then('User verifies Class name should be displayed on each of my cards',()=>{
@@ -23,6 +24,7 @@ describe('', () => {
         cy.get('[class="classImage"]').should('be.visible')
     })
     Then('User verifies Square class cards is displayed two in a row or not',()=>{
+        
         cy.get('.classInfiniteScroll').scrollTo('0%', '100%')
         home.getClassContainer().scrollTo('0%', '100%')
         cy.get('[class="classImage"]').its('length')
@@ -32,7 +34,7 @@ describe('', () => {
             cy.log("Locators lengh=th :" + cy.get('[class="classImage"]'))
           })
         //cy.get('[class="classImage"]').should('have.length.greaterThan', 3)
-        home.getClassCardImage().should('have.length.greaterThan', 3)
+        cy.get('[class="classImage"]').should('have.length.greaterThan', 3)
         //cy.get('[class="h-100 pr-0 className col-9"]').eq(0).should('have.attr', 'style', 'max-width: 456px;')
     
     })

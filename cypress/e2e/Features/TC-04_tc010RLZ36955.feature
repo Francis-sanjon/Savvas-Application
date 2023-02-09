@@ -14,5 +14,5 @@ Feature: Verify clicking on the Rectangular class card title navigates to the as
         Then User verifies which nagating to assignment listing page
 
         Examples:
-            | username                      | password    |
-            | MSuite49win10chrome_teacher04 | testing123$ |
+            | username     | password    |
+            | stud1_test01 | testing123$ |

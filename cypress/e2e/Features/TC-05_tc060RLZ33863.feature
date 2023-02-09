@@ -8,8 +8,8 @@ Feature: Verify square class card for Student user(Users with 4 or more classes)
         Then User verifies Class name should be displayed on each of my cards
         Then User verifies Background each of myCards
         Then class picture set on each class card
-        #Then User verifies Square class cards is displayed two in a row or not
-        # Then User verifies Original picture "Assignments","Discuss","Programs" fill the whole container or not
+        Then User verifies Square class cards is displayed two in a row or not
+        Then User verifies Original picture "Assignments","Discuss","Programs" fill the whole container or not
         And User Click the "Pen and Paper" icon
         Then User verifies which navigating to Assignment listing page or not
         And User navigating to home page
@@ -25,4 +25,4 @@ Feature: Verify square class card for Student user(Users with 4 or more classes)
 
         Examples:
             | username                      | password    |
-            | MSuite49win10chrome_teacher05 | testing123$ |
+            | MSuite49win10chrome_teacher06 | testing123$ |

@@ -24,7 +24,7 @@ Feature:Verify class quick links in Realize Dashboard for spanish user
         Given User launche the Realize login Page
         When User logins Savvas Appllication As Student with valid '<username1>' and valid '<password1>'
         Then User verifies the Realize Dashboard Page
-        And User clicks profile Icon
+        And User Clicks profile Icon
         And User clicks Setting option
         Then User verifies Setting page
         And User Clicks on prepared language
@@ -40,7 +40,7 @@ Feature:Verify class quick links in Realize Dashboard for spanish user
         And User clicks savvas Realize Icon to go Dashboard page
         And User Clicks profile Icon
         And User SignOut the Savvas Appllication
-      
+
         Examples:
             | username                     | password    | username1                    | password1   |
             | Msuite49_Dontdisturbteaher01 | testing123$ | Msuite49_Dontdisturbteaher01 | testing123$ |
