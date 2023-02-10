@@ -17,7 +17,13 @@ describe('', () => {
     Then('User verifies rectangular class cards is displayed one in a row or not',()=>{
         cy.get('[class="classImage"]').should('have.length.lessThan', 4)
         cy.get('[class="h-100 pr-0 className col-9"]').eq(0).should('have.attr', 'style', 'max-width: 726px;')
-    
+        cy.window().then(win => {
+            const width = win.innerWidth
+            const height = win.innerHeight
+          
+            cy.log(`Window size: ${width}x${height}`)
+          })
+            
     })
     Then('User verifies Class avatar with equivalent icon and label,Assignment,Student & Groups,Graph,Programs',()=>{ 
         profilePage.getAssignments().should('be.visible')

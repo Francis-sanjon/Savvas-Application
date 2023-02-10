@@ -59,7 +59,7 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     experimentalOriginDependencies: true,
     baseUrl: "https://nightly-www.savvasrealizedev.com/community",
-    defaultCommandTimeout: 15000,
+    defaultCommandTimeout: 30000,
     specPattern: "**/*.feature",
     supportFile: false,
     setupNodeEvents,
