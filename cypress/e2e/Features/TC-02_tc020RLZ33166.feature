@@ -22,6 +22,7 @@ Feature:Verify class quick links in Realize Dashboard for spanish user
         And User Clicks profile Icon
         And User SignOut the Savvas Appllication
         Given User launche the Realize login Page
+        Then User verifies the login page
         When User logins Savvas Appllication As Student with valid '<username1>' and valid '<password1>'
         Then User verifies the Realize Dashboard Page
         And User Clicks profile Icon

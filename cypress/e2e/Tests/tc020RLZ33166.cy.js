@@ -15,9 +15,11 @@ describe('', () => {
             return false
         })
     })
-
     And('User clicks profile Icon', () => {
         home.getProfileIconNew().click()
+    })
+    And('User verifies the login page', () => {
+       cy.url().should('include','login')
     })
     And('User clicks Setting option', () => {
         let condition = '';
@@ -100,8 +102,7 @@ describe('', () => {
     })
     And('User SignOut the Savvas Appllication', () => {
         home.getSignOutBtn().click()
- cy.wait(5000)
-    })
+           })
     When("User logins Savvas Appllication As Student with valid {string} and valid {string}", (username, password) => {
         bs.savvasLogin(username, password)
         Cypress.on('uncaught:exception', (err, runnable) => {

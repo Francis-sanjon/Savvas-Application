@@ -23,6 +23,9 @@ describe('', () => {
     cy.url().should('include', 'dashboard');
   })
   Then('User verifies Help Icon Present in TopNavbar with Question Mark Icon enrolled with Circle Icon or not', () => {
+    // home.getHelpIconColor().realHover()
+    // home.getHelpIconColor().should('have.css', 'border-radius', '50%')
+    // cy.get('.header__navbar').shadow().find('[data-utility-id="help"]').shadow().find('[data-color="primary-shade"]').should('be.visible')
     home.getHelpIconColor().should('be.visible')
   })
   Then('User verifies Black Colour question mark button should present in Top Navbar with White background colour', () => {

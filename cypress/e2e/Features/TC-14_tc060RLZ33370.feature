@@ -1,7 +1,7 @@
-# Test Case-05
-Feature: Verify square class card for Student user(Users with 4 or more classes)
+# Test Case-14
+Feature: Verify square class card for EB Auto teacher user (Users with 4 or more classes)
 
-    Scenario Outline:Verify square class card for Student user(Users with 4 or more classes)
+    Scenario Outline:Verify square class card for EB Auto teacher user (Users with 4 or more classes)
         Given User launche the Realize login Page
         When User logins Savvas Appllication as Student with valid '<username>' and valid '<password>'
         Then User verifies the Realize Dashboard Page
@@ -25,4 +25,4 @@ Feature: Verify square class card for Student user(Users with 4 or more classes)
 
         Examples:
             | username                      | password    |
-            | MSuite49win10chrome_teacher05 | testing123$ |
+            | MSuite49win10chrome_teacher04 | testing123$ |

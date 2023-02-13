@@ -1,5 +1,5 @@
 class Home {
-  getNavBar(){
+  getNavBar() {
     return cy.get('.header__navbar').as('NavBar')
   }
   getHelpIcon() {
@@ -31,49 +31,49 @@ class Home {
   }
   getProfileIconNew() {
     return cy.get('.header__navbar').shadow().find('.profile-container-wrapper')
-    }
+  }
   getProfileIcon() {
     return cy.get('.header__navbar_student').shadow().find('[class="profile-container"]')
-    }
-    getSettingNew() {
-      return cy.get('.header__navbar_student').shadow().find('[class="platform__navbar--profileUtility hydrated"]').shadow().find('[class="utility__item--userName"]')
-    }
-    getProfileName() {
-      return cy.get('.header__navbar_student').shadow().find('[data-utility-id="profile"]')
-    }
-    getSignOutBtn() {
-      return cy.get('.header__navbar').shadow().find('[class="avatar-dropdown hydrated"]').shadow().find('[data-id="signOut"]')
-    }
+  }
+  getSettingNew() {
+    return cy.get('.header__navbar_student').shadow().find('[class="platform__navbar--profileUtility hydrated"]').shadow().find('[class="utility__item--userName"]')
+  }
+  getProfileName() {
+    return cy.get('.header__navbar_student').shadow().find('[data-utility-id="profile"]')
+  }
+  getSignOutBtn() {
+    return cy.get('.header__navbar').shadow().find('[class="avatar-dropdown hydrated"]').shadow().find('[data-id="signOut"]')
+  }
   getSetting() {
     return cy.get('.header__navbar').shadow().find('[class="avatar-dropdown hydrated"]').shadow().find('[data-id="settings"]')
   }
   getSettingIcon() {
     return cy.get('.header__navbar_student').shadow().find('[class="avatar-dropdown hydrated"]').shadow().find('[data-id="settings"]')
   }
-  getEllipsis(){
-    return  cy.get('.header__navbar_student').shadow().find('[aria-describeby="tooltip-id"]')
+  getEllipsis() {
+    return cy.get('.header__navbar_student').shadow().find('[aria-describeby="tooltip-id"]')
   }
-  getClassCardTitle(){
-    return  cy.get('.classInfiniteScroll').find('[class="class__title"]')
+  getClassCardTitle() {
+    return cy.get('.classInfiniteScroll').find('[class="class__title"]')
   }
-getColorBar(){
-  return cy.get('[class="classAssignmentLink"]')
-}
-getClassCardImage(){
-  return cy.get('[class="classImage"]').eq(1)
-}
-getClassCardHeader(){
-  return cy.get('.classInfiniteScroll').find('[class="class__title"]').eq(1)
-}
-  getClassContainer(){
-    return  cy.get('.classInfiniteScroll')
+  getColorBar() {
+    return cy.get('[class="classAssignmentLink"]')
   }
-  getEllipsis(){
+  getClassCardImage() {
+    return cy.get('[class="classImage"]').eq(1)
+  }
+  getClassCardHeader() {
+    return cy.get('.classInfiniteScroll').find('[class="class__title"]').eq(1)
+  }
+  getClassContainer() {
+    return cy.get('.classInfiniteScroll')
+  }
+  getEllipsis() {
     return cy.get('.header__navbar_student').shadow().find('.platform__navbar--profileUtility').shadow().find('[class="utility__item--userName"]')
- }
- getPopUpPrgm(){
-  return cy.get('[class="programs-list"]')
- }
+  }
+  getPopUpPrgm() {
+    return cy.get('[class="programs-list"]')
+  }
 
 }
 export default Home

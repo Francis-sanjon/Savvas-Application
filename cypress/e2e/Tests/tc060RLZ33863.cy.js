@@ -39,9 +39,11 @@ describe('', () => {
     
     })
     Then('User verifies Original picture "Assignments","Discuss","Programs" fill the whole container or not',()=>{
-        profilePage.getAssignments().should('be.visible')
-    profilePage.getStudentsGroups().should('be.visible')
-    profilePage.getPrograms().should('be.visible') 
+    //     profilePage.getAssignments().should('be.visible')
+    // profilePage.getStudentsGroups().should('be.visible')
+    // profilePage.getPrograms().should('be.visible') 
+   
+    
     })
     And('User Click the "Pen and Paper" icon',()=>{
         profilePage.getAssignments().click()

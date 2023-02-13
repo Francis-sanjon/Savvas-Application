@@ -8,7 +8,7 @@ Feature: Verify the Help Icon Updated with latest styles in Dashboard Page
     Then User verifies Help Icon Present in TopNavbar with Question Mark Icon enrolled with Circle Icon or not
     Then User verifies Black Colour question mark button should present in Top Navbar with White background colour
     And User Clicks Help Icon
-    #Then User Verifies Drop Down background colour
+    Then User Verifies Drop Down background colour
     # Then User verifies Prime Shade on Help Icon when mouseOver
     Then User Verifies Search Text Box apperars on the Top of the Drop Down Values
     And User Enters some value in Textbox
