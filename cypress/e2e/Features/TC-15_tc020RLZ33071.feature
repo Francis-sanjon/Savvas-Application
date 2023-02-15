@@ -1,5 +1,5 @@
-# Test Case-14
-Feature: Verify square class card for teacher user(Users with 4 or more classes)
+# Test Case-15
+Feature: TC-15_Verify square class card for teacher user(Users with 4 or more classes)
 
     Scenario Outline: Verify square class card for teacher user(Users with 4 or more classes)
         Given User launche the Realize login Page

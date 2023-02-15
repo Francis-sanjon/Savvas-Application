@@ -1,5 +1,5 @@
 # Test Case-04
-Feature: Verify clicking on the Rectangular class card title navigates to the assignment listing page of that class for Teacher user
+Feature: TC-04_Verify clicking on the Rectangular class card title navigates to the assignment listing page of that class for Teacher user
 
     Scenario Outline:Verify clicking on the Rectangular class card title navigates to the assignment listing page of that class for Teacher user
         Given User launche the Realize login Page
@@ -14,5 +14,6 @@ Feature: Verify clicking on the Rectangular class card title navigates to the as
         Then User verifies which nagating to assignment listing page
 
         Examples:
-            | username     | password    |
-            | stud1_test01 | testing123$ |
+            | username                               | password    |
+            | stud1_test01                           | testing123$ |
+            | autostuddashon02@gedu-demo-pearson.com | testing123$ |

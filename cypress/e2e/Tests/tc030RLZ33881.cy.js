@@ -1,6 +1,6 @@
 const { Given, When, Then, And } = require("@badeball/cypress-cucumber-preprocessor")
 import BaseClass from '../PageObject/BaseClass.spec';
-import Home from '../PageObject/01_Home.spec'
+import Home from '../PageObject/01_Home.spec';
 const home=new Home();
 const bs=new BaseClass();
 let colors = [];

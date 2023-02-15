@@ -1,6 +1,6 @@
 
 # Test Case-09
-Feature: Verify new class details page is not displayed with new UI
+Feature: TC-09_Verify new class details page is not displayed with new UI
 
     Scenario Outline:Verify new class details page is not displayed with new UI
         Given User launche the Realize login Page
@@ -9,8 +9,9 @@ Feature: Verify new class details page is not displayed with new UI
         And User Hover on Classes subnav
         Then User verifies class list popup modesl is displayed or not
         And User Click on any classes displayed in class list popup modal
+        And User moving mousedown
         Then User verifies new class details page is not displayed
 
         Examples:
-            | username       | password    |
-            | realize_admin2 | savvas@123 |
+            | username              | password    |
+            | teacher_noclasslist01 | testing123$ |

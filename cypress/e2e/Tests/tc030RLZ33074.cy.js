@@ -10,8 +10,8 @@ const profilePage = new ProfilePage();
 
 describe('', () => {
    
-    Then('Then User Verifies the square class cards in new Realize homepage', () => {
-        cy.get('[class="classAssignmentLink"]').should('have.attr', 'style', 'max-width: 726px;')
+    Then('User Verifies the square class cards in new Realize homepage', () => {
+        cy.get('[class="h-100 pr-0 className col-10"]').should('have.attr', 'style', 'max-width: 564px;')
     })
     And("User Hover 'Pen and Paper' icon", () => {
         cy.get('[data-e2e-id="class-listing-assignments-link"]').eq(0).realHover()

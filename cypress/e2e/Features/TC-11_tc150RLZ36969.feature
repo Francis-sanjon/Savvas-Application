@@ -1,5 +1,5 @@
 # Test Case-11
-Feature: Verify clicking on the Rectangular Google class card title navigates to the assignment listing page of that class for Student
+Feature: TC-11_Verify clicking on the Rectangular Google class card title navigates to the assignment listing page of that class for Student
 
     Scenario Outline:Verify clicking on the Rectangular Google class card title navigates to the assignment listing page of that class for Student
          Given User launche the Realize login Page

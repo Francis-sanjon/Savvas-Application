@@ -1,5 +1,5 @@
 # Test Case-02
-Feature:Verify class quick links in Realize Dashboard for spanish user
+Feature:TC-02_Verify class quick links in Realize Dashboard for spanish user
 
     Scenario Outline:Verify class quick links in Realize Dashboard for spanish user
         Given User launche the Realize login Page

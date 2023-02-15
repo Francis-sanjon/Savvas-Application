@@ -1,4 +1,4 @@
-Feature: Verify logged in avatar icon and username are displayed in top navbar of home page for EB Plus Teacher
+Feature: TC-17_Verify logged in avatar icon and username are displayed in top navbar of home page for EB Plus Teacher
 
     Scenario Outline:Verify logged in avatar icon and username are displayed in top navbar of home page for EB Plus Teacher
         Given User launche the Realize login Page

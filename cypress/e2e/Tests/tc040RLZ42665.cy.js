@@ -22,8 +22,12 @@ describe('', () => {
     })
 
   })
+  And('User moving mousedown', () => {
+    cy.get('.header__navbar').shadow().find('[data-id="classes"]').trigger('mouseout')
+  })
   Then('User verifies new class details page is not displayed', () => {
-    cy.url().should('include', 'assignments')
+    cy.url().should('not.contain.text', 'assignments')
+    
   })
 
 

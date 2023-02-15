@@ -1,5 +1,5 @@
-# Test Case-01
-Feature: Verify the Help Icon Updated with latest styles in Dashboard Page for Student
+# Test Case-16
+Feature: TC-16_Verify the Help Icon Updated with latest styles in Dashboard Page for Student
 
     Scenario Outline:Verify the Help Icon Updated with latest styles in Dashboard Page for Student
         Given User launche the Realize login Page

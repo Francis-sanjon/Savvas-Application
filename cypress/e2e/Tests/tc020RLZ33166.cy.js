@@ -65,8 +65,7 @@ describe('', () => {
             cy.log(msg)
         })
         // cy.get('[data-e2e-id="ok"]').click()       
-
-        // cy.wait(15000)
+ cy.wait(15000)
     })
     And('User clicks savvas Realize Icon to go Dashboard page', () => {
         profilePage.getRealizeImg().click()
@@ -93,6 +92,7 @@ describe('', () => {
     })
     And('User Clicks profile Icon', () => {
         home.getProfileIconNew().click()
+
     })
     And('User clicks Setting', () => {
         home.getSetting().click()
@@ -102,6 +102,7 @@ describe('', () => {
     })
     And('User SignOut the Savvas Appllication', () => {
         home.getSignOutBtn().click()
+        cy.wait(5000)
            })
     When("User logins Savvas Appllication As Student with valid {string} and valid {string}", (username, password) => {
         bs.savvasLogin(username, password)

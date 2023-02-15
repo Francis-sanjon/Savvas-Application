@@ -1,8 +1,6 @@
-# Test Case-03
+Feature: TC-18_Verify the UserName displayed on the profile shows the first name with elipsis when it exceeds X char or pixel for Student user
 
-Feature: TC-03_Verify the UserName displayed on the profile shows the first name without elipsis when it less than X char or pixel for Student user
-
-  Scenario Outline:Verify the UserName displayed on the profile shows the first name without elipsis when it less than X char or pixel for Student user
+  Scenario Outline:Verify the UserName displayed on the profile shows the first name with elipsis when it exceeds X char or pixel for Student user
     Given User launche the Realize login Page
     When User logins Savvas Appllication with valid '<username>' and valid '<password>'
     Then User verifies the Realize Dashboard Page
@@ -24,5 +22,4 @@ Feature: TC-03_Verify the UserName displayed on the profile shows the first name
 
     Examples:
       | username                | password    |
-      | stud1_test01            | testing123$ |
       | DashboardSuite49_stud01 | testing123$ |

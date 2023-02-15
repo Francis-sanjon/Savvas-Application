@@ -1,7 +1,7 @@
 # Test Case-06
-Feature: Verify square class card for Student user(Users with 4 or more classes)
+Feature: TC-06_ Verify rectangular class card for teacher user(Users with 3 or less than 3 classes)
 
-  Scenario Outline:Verify square class card for Student user(Users with 4 or more classes)
+  Scenario Outline: Verify rectangular class card for teacher user(Users with 3 or less than 3 classes)
     Given User launche the Realize login Page
     When User logins Savvas Appllication As Teacher with valid '<username>' and valid '<password>'
     Then User verifies the Realize Dashboard Page

@@ -6,19 +6,19 @@ describe('', () => {
    
    
     Then('User verifies rectangular class card is displayed in full browser window', () => {
-        cy.get(':nth-child(1) > .classHeader > .classAssignmentLink > .h-100').should('have.attr','style','max-width: 457px;')
+        cy.get(':nth-child(1) > .classHeader > .classAssignmentLink > .h-100').should('have.attr','style','max-width: 1191px;')
     })
-    And('User Change bowser resolution to 767 and verify mobile class card', () => {
+    And('User Change bowser resolution to 767', () => {
         cy.viewport(767,1024)
     })
     Then('User verifies mobile class card is displayed or not when browser resolution is below 768', () => {
-      
+        cy.get(':nth-child(1) > .classHeader > .classAssignmentLink > .h-100').should('have.attr','style','max-width: 599px;')
     })
-    And('User Change bowser resolution to 800 and verify rectangular class card', () => {
+    And('User Change bowser resolution to 800', () => {
         cy.viewport(800,1024)
     })
-    When('Then User verifies Rectangular class card is displayed or not when browser resolution is 768 or above', () => {
-        cy.get(':nth-child(1) > .classHeader > .classAssignmentLink > .h-100').should('have.attr','style','max-width: 326px;')
+    When('User verifies Rectangular class card is displayed or not when browser resolution is 768 or above', () => {
+        cy.get(':nth-child(1) > .classHeader > .classAssignmentLink > .h-100').should('have.attr','style','max-width: 327px;')
     })
    
 

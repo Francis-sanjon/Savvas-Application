@@ -1,8 +1,8 @@
 
 # Test Case-08
-Feature: Verify scroll bar is displaying for My Programs section if the screen viewport is small (Max is 5 Programs but displaying only 4 programs) for Student user
+Feature: TC-08_Verify new TOC page is displayed while clicking on any program in My Programs section  for  Admin  user when show.browse.navbar.integration='ON
 
-    Scenario Outline:Verify scroll bar is displaying for My Programs section if the screen viewport is small (Max is 5 Programs but displaying only 4 programs) for Student user
+    Scenario Outline:Verify new TOC page is displayed while clicking on any program in My Programs section  for  Admin  user when show.browse.navbar.integration='ON
         Given User launche the Realize login Page
         When User logins Savvas Appllication as Admin User with valid '<username>' and valid '<password>'
         Then User verifies the Realize Dashboard Page

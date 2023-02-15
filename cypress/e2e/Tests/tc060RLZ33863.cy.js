@@ -5,76 +5,78 @@ import ProfilePage from '../PageObject/ProfilePage.spec';
 import ClassesPage from '../PageObject/ClassesPage.spec'
 const bs = new BaseClass();
 const home = new Home()
-const classesPage=new ClassesPage()
+const classesPage = new ClassesPage()
 const profilePage = new ProfilePage()
 
 describe('', () => {
-    Then('User logins Savvas Appllication as Student with valid {string} and valid {string}',(username,password)=>{
-      bs.savvasLogin(username,password)
-      cy.viewport(1900,1080)
+    Then('User logins Savvas Appllication as Student with valid {string} and valid {string}', (username, password) => {
+        bs.savvasLogin(username, password)
     })
-  
-    Then('User verifies Class name should be displayed on each of my cards',()=>{
+
+    Then('User verifies Class name should be displayed on each of my cards', () => {
         home.getClassCardTitle().should('be.visible')
     })
-    Then('User verifies Background each of myCards',()=>{
+    Then('User verifies Background each of myCards', () => {
         cy.get('[class="row classHeader"]').should('not.have.css', 'color', 'rgb(0, 0, 0)')
     })
-    Then('class picture set on each class card',()=>{
+    Then('class picture set on each class card', () => {
         cy.get('[class="classImage"]').should('be.visible')
     })
-    Then('User verifies Square class cards is displayed two in a row or not',()=>{
-        
-        cy.get('.classInfiniteScroll').scrollTo('0%', '100%')
-        home.getClassContainer().scrollTo('0%', '100%')
-        cy.get('[class="classImage"]').its('length')
-          .then(length => {
-            // Do something with the length
-            cy.log(length)
-            cy.log("Locators lengh=th :" + cy.get('[class="classImage"]'))
-          })
-        //cy.get('[class="classImage"]').should('have.length.greaterThan', 3)
-        cy.get('[class="classImage"]').should('have.length.greaterThan', 3)
-        //cy.get('[class="h-100 pr-0 className col-9"]').eq(0).should('have.attr', 'style', 'max-width: 456px;')
-    
+    Then('User verifies Square class cards is displayed two in a row or not', () => {
+        cy.get('.classHeader > .classAssignmentLink > div').eq(0).should('have.attr', 'style', 'max-width: 1191px;')
+       
+        // cy.get('.classInfiniteScroll').scrollTo('0%', '100%')
+        // home.getClassContainer().scrollTo('0%', '100%')
+        // cy.get('[class="classImage"]').its('length')
+        //     .then(length => {
+        //         // Do something with the length
+        //         cy.log(length)
+        //         cy.log("Locators lengh=th :" + cy.get('[class="classImage"]'))
+        //     })
+
+        // cy.get('[class="classImage"]').should('have.length.greaterThan', 3)
+
     })
-    Then('User verifies Original picture "Assignments","Discuss","Programs" fill the whole container or not',()=>{
-    //     profilePage.getAssignments().should('be.visible')
-    // profilePage.getStudentsGroups().should('be.visible')
-    // profilePage.getPrograms().should('be.visible') 
-   
-    
+    Then('User verifies Original picture "Pen and Paper","People","Graph","Book" fill the whole container or not', () => {
+        profilePage.getAssignments().should('be.visible')
+        profilePage.getStudentsGroups().should('be.visible')
+        profilePage.getData().should('be.visible')
+        profilePage.getPrograms().should('be.visible')
+
+
     })
-    And('User Click the "Pen and Paper" icon',()=>{
+    And('User Click the "Pen and Paper" icon', () => {
         profilePage.getAssignments().click()
-        cy.wait(10000) 
+        cy.wait(10000)
     })
-    Then('User verifies which navigating to Assignment listing page or not',()=>{
+    Then('User verifies which navigating to Assignment listing page or not', () => {
         classesPage.getAssignmentPage().should('be.visible')
     })
-   
-    And('User Click the "People" icon',()=>{
+
+    And('User Click the "People" icon', () => {
         profilePage.getStudentsGroups().click()
     })
-    Then('User verifies which navigating to Class Discussions page for that class or not',()=>{
+    Then('User verifies which navigating to Class Discussions page for that class or not', () => {
         classesPage.getPeopleLabel().should('be.visible')
     })
-   
-    And('User Click the "Graph" icon',()=>{
+
+    And('User Click the "Graph" icon', () => {
         profilePage.getData().click()
     })
-    Then('User verifies that link navigated to the Class Results by Assignment page for that class or not',()=>{
+    Then('User verifies that link navigated to the Class Results by Assignment page for that class or not', () => {
         classesPage.getGraphLabel().should('be.visible')
     })
-   
-    And('User Click the "Book" icon Dropdown',()=>{
-        profilePage.getPrograms().click() 
+
+    And('User Click the "Book" icon Dropdown', () => {
+        profilePage.getPrograms().click()
     })
-    Then('User verifies that display the programs associated with the class',()=>{
+    Then('User verifies that display the programs associated with the class', () => {
 
         home.getPopUpPrgm().should('be.visible')
     })
+   
 
-  
+
+
 
 })

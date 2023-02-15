@@ -31,6 +31,16 @@ describe('', () => {
   Then('User verifies Black Colour question mark button should present in Top Navbar with White background colour', () => {
     home.getHelpIconColor().should('have.css', 'color', 'rgb(0, 0, 0)')
   })
+ And('User Mouseover the help Icon', () => {
+   home.getHelpIcon().realHover()
+  })
+   And('User verifies Prime Shade on Help Icon when mouseover', () => {
+    home.getHelpIconColor().should('have.css', 'border-radius', '50%')
+  })
+
+
+
+
 
   And('User Clicks Help Icon', () => {
     home.getHelpIconColor().click()

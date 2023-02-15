@@ -1,5 +1,5 @@
 # Test Case-05
-Feature: Verify square class card for Student user(Users with 4 or more classes)
+Feature: TC-05_Verify square class card for Student user(Users with 4 or more classes)
 
     Scenario Outline:Verify square class card for Student user(Users with 4 or more classes)
         Given User launche the Realize login Page
@@ -9,7 +9,7 @@ Feature: Verify square class card for Student user(Users with 4 or more classes)
         Then User verifies Background each of myCards
         Then class picture set on each class card
         Then User verifies Square class cards is displayed two in a row or not
-       # Then User verifies Original picture "Assignments","Discuss","Programs" fill the whole container or not
+        Then User verifies Original picture "Pen and Paper","People","Graph","Book" fill the whole container or not
         And User Click the "Pen and Paper" icon
         Then User verifies which navigating to Assignment listing page or not
         And User navigating to home page

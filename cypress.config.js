@@ -57,6 +57,8 @@ module.exports = defineConfig({
 
   e2e: {
     chromeWebSecurity: false,
+    viewportWidth:1920,
+    viewportHeight:1080,
     experimentalOriginDependencies: true,
     baseUrl: "https://nightly-www.savvasrealizedev.com/community",
     defaultCommandTimeout: 30000,

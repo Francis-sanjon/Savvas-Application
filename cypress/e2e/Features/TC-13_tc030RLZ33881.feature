@@ -1,4 +1,4 @@
-Feature: Verify Class card Header background colour should persist between logins for GC Student
+Feature: TC-13_Verify Class card Header background colour should persist between logins for GC Student
 
 
     Scenario: Verify Class card Header background colour should persist between logins for GC Student
