@@ -62,8 +62,11 @@ class Home {
   getClassCardImage() {
     return cy.get('[class="classImage"]').eq(1)
   }
+   getClassCardImage1() {
+    return cy.get('[class="classImage"]')
+  }
   getClassCardHeader() {
-    return cy.get('.classInfiniteScroll').find('[class="class__title"]').eq(1)
+    return cy.get('.classInfiniteScroll').find('[class="class__title"]').eq(0)
   }
   getClassContainer() {
     return cy.get('.classInfiniteScroll')
@@ -74,6 +77,54 @@ class Home {
   getPopUpPrgm() {
     return cy.get('[class="programs-list"]')
   }
+  getMycardBgColor() {
+    return cy.get('[class="row classHeader"]')
+  }
+  getSquareCard() {
+    return cy.get('.classHeader > .classAssignmentLink > div')
+  }
+  getRectangularCard() {
+    return cy.get('[class="h-100 pr-0 className col-9"]')
+  }
+  getPgrmImg() {
+    return cy.get('[class="program-row_list_image"]')
+  }
+  getMyProgramList() {
+    return cy.get('[class="programs-list"]')
+  }
+getPaperAndPen(){
+  return cy.get('[data-e2e-id="class-listing-assignments-link"]')
+}
+getPeople(){
+  return cy.get('[data-e2e-id="class-listing-studentsAndGroups-link"]')
+}
+getGraph(){
+  return cy.get('[data-e2e-id="class-listing-data-link"]')
+}
+getBook(){
+  return cy.get('[class="program-dropdown"]')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 export default Home

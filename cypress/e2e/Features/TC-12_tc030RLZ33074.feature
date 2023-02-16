@@ -3,7 +3,7 @@
 Feature: TC-12_Verify tooltip displayed for square class card quicklinks
 
     Scenario Outline:Verify tooltip displayed for square class card quicklinks
-         Given User launche the Realize login Page
+        Given User launche the Realize login Page
         When User logins Savvas Appllication As Teacher with valid '<username>' and valid '<password>'
         Then User verifies the Realize Dashboard Page
         Then User Verifies the square class cards in new Realize homepage
@@ -19,3 +19,4 @@ Feature: TC-12_Verify tooltip displayed for square class card quicklinks
         Examples:
             | username                      | password    |
             | MSuite49win10chrome_teacher06 | testing123$ |
+           

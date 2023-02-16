@@ -20,7 +20,8 @@ describe('', () => {
         })
     })
     And('User Hover on the colorbar area', () => {
-        home.getColorBar().eq(1).trigger('mouseover')
+       home.getColorBar().eq(1).trigger('mouseover')
+       // home.getColorBar().eq(1).realHover()
     })
     Then('verify cursor turns into hand symbol', () => {
         home.getColorBar().should(($el) => {

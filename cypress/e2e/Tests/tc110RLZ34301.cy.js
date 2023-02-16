@@ -37,6 +37,7 @@ describe('', () => {
     Then('User verifies the length of UserName', () => {
         profilePage.getStudentName().then((data) => {
             let len = data.length;
+            cy.log(len)
         })
     })
     Then('User verifies if the length of the first name less than X char then ellipsis should not be displayed', () => {

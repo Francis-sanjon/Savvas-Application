@@ -9,17 +9,17 @@ Feature: TC-15_Verify square class card for teacher user(Users with 4 or more cl
         Then User verifies Background each of myCards
         Then class picture set on each class card
         Then User verifies Square class cards is displayed two in a row or not
-       # Then User verifies Original picture "Assignments","Discuss","Programs" fill the whole container or not
-        And User Click the "Pen and Paper" icon
+        Then User verifies Original Icons "Pen and Paper","People","Graph","Book" fill the whole container or not
+        And User Click the "Pen and Paper" Icon
         Then User verifies which navigating to Assignment listing page or not
         And User navigating to home page
-        And User Click the "People" icon
+        And User Click the "People" Icon
         Then User verifies which navigating to Class Discussions page for that class or not
         And User navigating to home page
-        And User Click the "Graph" icon
+        And User Click the "Graph" Icon
         Then User verifies that link navigated to the Class Results by Assignment page for that class or not
         And User navigating to home page
-        And User Click the "Book" icon Dropdown
+        And User Click the "Book" Icon Dropdown
         Then User verifies that display the programs associated with the class
 
 

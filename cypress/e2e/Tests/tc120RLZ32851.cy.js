@@ -13,34 +13,27 @@ describe('', () => {
   Given("User launche the Realize login Page", () => {
     cy.visit('/')
     Cypress.on('uncaught:exception', (err, runnable) => {
-              return false
-     })
+      return false
+    })
   })
-  When("User logins Savvas Appllication with valid {string} and valid {string}", async(username, password) => {
+  When("User logins Savvas Appllication with valid {string} and valid {string}", async (username, password) => {
     bs.savvasLogin(username, password)
   })
   Then('User verifies the Realize Dashboard Page', () => {
     cy.url().should('include', 'dashboard');
   })
   Then('User verifies Help Icon Present in TopNavbar with Question Mark Icon enrolled with Circle Icon or not', () => {
-    // home.getHelpIconColor().realHover()
-    // home.getHelpIconColor().should('have.css', 'border-radius', '50%')
-    // cy.get('.header__navbar').shadow().find('[data-utility-id="help"]').shadow().find('[data-color="primary-shade"]').should('be.visible')
-    home.getHelpIconColor().should('be.visible')
+        home.getHelpIconColor().should('be.visible')
   })
   Then('User verifies Black Colour question mark button should present in Top Navbar with White background colour', () => {
     home.getHelpIconColor().should('have.css', 'color', 'rgb(0, 0, 0)')
   })
- And('User Mouseover the help Icon', () => {
-   home.getHelpIcon().realHover()
+  And('User Mouseover the help Icon', () => {
+    home.getHelpIcon().realHover()
   })
-   And('User verifies Prime Shade on Help Icon when mouseover', () => {
+  And('User verifies Prime Shade on Help Icon when mouseover', () => {
     home.getHelpIconColor().should('have.css', 'border-radius', '50%')
   })
-
-
-
-
 
   And('User Clicks Help Icon', () => {
     home.getHelpIconColor().click()
@@ -48,15 +41,12 @@ describe('', () => {
   Then('User Verifies Drop Down background colour', () => {
     home.getPopUp().should('have.css', 'color', 'rgb(33, 37, 41)')
   })
-  
-  Then('User verifies Prime Shade on Help Icon when mouseOver', () => {
 
-  })
   Then('User Verifies Search Text Box apperars on the Top of the Drop Down Values', () => {
     home.getInputBox().should('be.visible')
   })
   And('User Enters some value in Textbox', () => {
-    home.getInputBox().click().type('classes',{force:true})
+    home.getInputBox().click().type('classes', { force: true })
   })
 
   And('User hits enter', () => {
@@ -76,8 +66,8 @@ describe('', () => {
     cy.get('[class="floatingModal hydrated"]').should('be.visible')
   })
 
- And('User clicks Program Training option', () => {
-  bs.windowHandle(home.getProgramTraining())
+  And('User clicks Program Training option', () => {
+    bs.windowHandle(home.getProgramTraining())
   })
 
   Then('User verifies the url for Program Training', () => {
@@ -86,16 +76,16 @@ describe('', () => {
   And('User navigating to home page', () => {
     cy.go('back')
   })
- 
+
   And('User clicks Technical Support option', () => {
     bs.windowHandle(home.getTechnicalSupport())
   })
   Then('User verifies the url for Technical Support', () => {
     cy.url().should('include', 'support/s/contactsupport')
   })
- 
-    And('User clicks Contact a Program Specialist option', () => {
-      bs.windowHandle(home.getProgramSpecialist())
+
+  And('User clicks Contact a Program Specialist option', () => {
+    bs.windowHandle(home.getProgramSpecialist())
   })
   Then('User verifies the url for Contact a Program Specialist', () => {
     cy.url().should('include', 'https://mysavvastraining.com/')

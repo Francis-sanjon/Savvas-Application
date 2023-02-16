@@ -3,10 +3,10 @@ class ProfilePage {
       return cy.get('#languageDropdown')
    }
    getSpanish() {
-      return cy.get('.ng-binding').eq(22)
+      return cy.get('.dropdown-menu > li:nth-child(2)')
    }
    getEnglish() {
-      return cy.get('.ng-binding').eq(21)
+      return cy.get('.dropdown-menu > li:nth-child(1)')
    }
    getSaveBtn() {
       return cy.get('[data-e2e-id="save"]').eq(1)
@@ -25,23 +25,12 @@ class ProfilePage {
    }
    getPrograms() {
     return cy.get('[class="dropdown-text"]').eq(0)
-      //return cy.get('#program-dropdown-15id > a > .dropdown-text')
+    
    }
    getStudentName(){
       return cy.get('#studentName')
    }
-   RollBack(condition) {
-      if (condition == 'Setting') {
-         home.getSetting().should('have.text', 'Settings').click()
-      } else {
-         // Perform actions if the condition is false
-         home.getSetting().should('have.text', 'Configuración').click()
-         profilePage.getPreparedLanguage().click()
-         cy.get('.ng-binding').eq(21).click()
-         profilePage.getSaveBtn().click()
-         //cy.wait(10000)
-      }
-   }
+  
    getHomeMenu() {
       return cy.get('.header__navbar_student').shadow().find('#home')
    }

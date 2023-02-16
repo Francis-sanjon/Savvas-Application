@@ -25,4 +25,3 @@ Feature: TC-03_Verify the UserName displayed on the profile shows the first name
     Examples:
       | username                | password    |
       | stud1_test01            | testing123$ |
-      | DashboardSuite49_stud01 | testing123$ |

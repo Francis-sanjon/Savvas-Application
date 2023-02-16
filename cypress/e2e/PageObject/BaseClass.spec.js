@@ -30,7 +30,12 @@ class BaseClass {
         // Log the text to the console
        return text;
     }
-
+length(locator){
+    cy.get(locator).then((data)=>{
+       let len=data.length;
+      return len;
+    })
+}
      msg() {
         return new Promise((resolve, reject) => {
           cy.get('#studentName').then((data) => {
@@ -60,6 +65,7 @@ class BaseClass {
 
             })
         }
+       
 
         Encrypt(value){
             const password = value;
