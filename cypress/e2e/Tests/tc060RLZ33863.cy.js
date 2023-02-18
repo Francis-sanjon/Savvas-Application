@@ -17,28 +17,17 @@ describe('', () => {
         home.getClassCardTitle().should('be.visible')
     })
     Then('User verifies Background each of myCards', () => {
-       // cy.get('[class="row classHeader"]').should('not.have.css', 'color', 'rgb(0, 0, 0)')
+     
         home.getMycardBgColor().should('not.have.css', 'color', 'rgb(0, 0, 0)')
     })
     Then('class picture set on each class card', () => {
-        //cy.get('[class="classImage"]').should('be.visible')
+      
         home.getClassCardImage().should('be.visible')
     })
     Then('User verifies Square class cards is displayed two in a row or not', () => {
-       // cy.get('.classHeader > .classAssignmentLink > div').eq(0).should('have.attr', 'style', 'max-width: 1191px;')
+      
        home.getSquareCard().eq(0).should('have.attr', 'style', 'max-width: 564px;')
-        // cy.get('.classInfiniteScroll').scrollTo('0%', '100%')
-        // home.getClassContainer().scrollTo('0%', '100%')
-        // cy.get('[class="classImage"]').its('length')
-        //     .then(length => {
-        //         // Do something with the length
-        //         cy.log(length)
-        //         cy.log("Locators lengh=th :" + cy.get('[class="classImage"]'))
-        //     })
-
-        // cy.get('[class="classImage"]').should('have.length.greaterThan', 3)
-
-    })
+           })
     Then('User verifies Original picture "Pen and Paper","People","Graph","Book" fill the whole container or not', () => {
         profilePage.getAssignments().should('be.visible')
         profilePage.getStudentsGroups().should('be.visible')

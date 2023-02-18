@@ -66,7 +66,7 @@ class Home {
     return cy.get('[class="classImage"]')
   }
   getClassCardHeader() {
-    return cy.get('.classInfiniteScroll').find('[class="class__title"]').eq(0)
+    return cy.get('.classInfiniteScroll').find('[class="class__title"]').eq(1)
   }
   getClassContainer() {
     return cy.get('.classInfiniteScroll')

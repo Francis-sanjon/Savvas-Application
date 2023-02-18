@@ -19,7 +19,7 @@ describe('', () => {
         home.getProfileIconNew().click()
     })
     And('User verifies the login page', () => {
-       cy.url().should('include','login')
+        cy.url().should('include', 'login')
     })
     And('User clicks Setting option', () => {
         let condition = '';
@@ -31,23 +31,19 @@ describe('', () => {
 
                 profilePage.getPreparedLanguage().click()
                 profilePage.getEnglish().click()
-                // cy.get('.ng-binding').eq(21).click()
+
                 profilePage.getSaveBtn().click()
                 cy.get('.message-container').then((data) => {
                     let msg = data.text();
                     cy.log(msg)
                 })
-                // cy.wait(10000)
+
                 profilePage.getRealizeImg().click()
                 home.getProfileIcon()
-                //  cy.get('.header__navbar').shadow().find('.profile-container-wrapper')
-                // home.getprofileIcon().click()
             }
-
         })
 
         home.getSetting().should('have.text', 'Settings').click()
-        // cy.wait(15000);
     })
     Then('User verifies Setting page', () => {
         cy.url().should('include', 'profile')
@@ -65,13 +61,11 @@ describe('', () => {
             cy.log(msg)
         })
         // cy.get('[data-e2e-id="ok"]').click()       
- cy.wait(15000)
+        cy.wait(15000)
     })
     And('User clicks savvas Realize Icon to go Dashboard page', () => {
         profilePage.getRealizeImg().click()
-
-
-    })
+})
     Then('User Verify the below data "Assignments" - as Asignaciones,"Student & Groups" - Estudiantes y grupos,"Data" - Datos,"Programs" - Programas', () => {
         profilePage.getStudentsGroups().then((data) => {
             let value = data.text()
@@ -103,7 +97,7 @@ describe('', () => {
     And('User SignOut the Savvas Appllication', () => {
         home.getSignOutBtn().click()
         cy.wait(5000)
-           })
+    })
     When("User logins Savvas Appllication As Student with valid {string} and valid {string}", (username, password) => {
         bs.savvasLogin(username, password)
         Cypress.on('uncaught:exception', (err, runnable) => {

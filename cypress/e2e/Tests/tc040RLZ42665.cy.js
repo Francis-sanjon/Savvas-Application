@@ -1,4 +1,4 @@
-const { When, And, Then } = require("@badeball/cypress-cucumber-preprocessor")
+const {  And, Then } = require("@badeball/cypress-cucumber-preprocessor")
 import 'cypress-real-events';
 import BaseClass from "../PageObject/BaseClass.spec";
 import ProfilePage from '../PageObject/ProfilePage.spec'

@@ -14,4 +14,4 @@ Feature: TC-10_Verify rectangular/square class card based on screen resolution f
 
         Examples:
             | username               | password    |
-            | MSuite49win10chrome_teacher05 | testing123$ |
+            | smokesuite17_teacher01 | testing123$ |

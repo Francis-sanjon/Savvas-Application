@@ -1,49 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="60.246" tests="1" failures="1">
-  <testsuite name="Root Suite" timestamp="2023-02-16T06:50:52" tests="0" file="cypress\e2e\Features\TC-19_tc160RLZ36970.feature" time="0.000" failures="0">
+<testsuites name="Mocha Tests" time="46.137" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-02-18T06:04:22" tests="0" file="cypress\e2e\Features\TC-19_tc160RLZ36970.feature" time="0.000" failures="0">
   </testsuite>
-  <testsuite name="TC-19_Verify clicking on the Square Google class card title navigates to the assignment listing page of that class for Student" timestamp="2023-02-16T06:50:52" tests="1" time="60.081" failures="1">
-    <testcase name="TC-19_Verify clicking on the Square Google class card title navigates to the assignment listing page of that class for Student Verify clicking on the Square Google class card title navigates to the assignment listing page of that class for Student (example #1)" time="0.000" classname="Verify clicking on the Square Google class card title navigates to the assignment listing page of that class for Student (example #1)">
-      <failure message="Timed out retrying after 30000ms: `cy.trigger()` failed because this element:
-
-`&lt;a _ngcontent-end-c135=&quot;&quot; class=&quot;classAssignmentLink&quot; href=&quot;https://nightly-www.savvasrealizedev.com/community/classes/9128b903d0564df088f8cbd93b199249/assignments&quot;&gt;...&lt;/a&gt;`
-
-is being covered by another element:
-
-`&lt;shell-cel-navbar _ngcontent-end-c30=&quot;&quot; role=&quot;banner&quot; ng-reflect-ng-class=&quot;header__navbar_student&quot; class=&quot;header__navbar_student hydrated&quot;&gt;&lt;/shell-cel-navbar&gt;`
-
-Fix this problem, or use {force: true} to disable error checking.
-
-https://on.cypress.io/element-cannot-be-interacted-with" type="CypressError"><![CDATA[CypressError: Timed out retrying after 30000ms: `cy.trigger()` failed because this element:
-
-`<a _ngcontent-end-c135="" class="classAssignmentLink" href="https://nightly-www.savvasrealizedev.com/community/classes/9128b903d0564df088f8cbd93b199249/assignments">...</a>`
-
-is being covered by another element:
-
-`<shell-cel-navbar _ngcontent-end-c30="" role="banner" ng-reflect-ng-class="header__navbar_student" class="header__navbar_student hydrated"></shell-cel-navbar>`
-
-Fix this problem, or use {force: true} to disable error checking.
-
-https://on.cypress.io/element-cannot-be-interacted-with
-    at ensureIsDescendent (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:133278:76)
-    at ensureDescendents (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:133335:5)
-    at ensureDescendentsAndScroll (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:133342:14)
-    at ensureElIsNotCovered (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:133474:5)
-    at runAllChecks (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:133668:52)
-    at retryActionability (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:133707:16)
-    at tryCatcher (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:11327:23)
-    at Promise.attempt.Promise.try (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:8601:29)
-    at whenStable (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:151463:65)
-    at <unknown> (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:150871:14)
-    at tryCatcher (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:11327:23)
-    at Promise._settlePromiseFromHandler (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:9262:31)
-    at Promise._settlePromise (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:9319:18)
-    at Promise._settlePromise0 (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:9364:10)
-    at Promise._settlePromises (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:9444:18)
-    at Promise._fulfill (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:9388:18)
-    at <unknown> (https://nightly-sso.rumba.pk12ls.com/__cypress/runner/cypress_runner.js:11002:46)
-From Your Spec Code:
-    at Context.eval (https://nightly-sso.rumba.pk12ls.com/__cypress/tests?p=cypress\e2e\Features\TC-19_tc160RLZ36970.feature:15420:15)]]></failure>
+  <testsuite name="TC-19_Verify clicking on the Square Google class card title navigates to the assignment listing page of that class for Student" timestamp="2023-02-18T06:04:22" tests="1" time="45.996" failures="0">
+    <testcase name="TC-19_Verify clicking on the Square Google class card title navigates to the assignment listing page of that class for Student Verify clicking on the Square Google class card title navigates to the assignment listing page of that class for Student (example #1)" time="41.720" classname="Verify clicking on the Square Google class card title navigates to the assignment listing page of that class for Student (example #1)">
     </testcase>
   </testsuite>
 </testsuites>
