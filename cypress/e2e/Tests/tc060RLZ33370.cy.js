@@ -14,13 +14,11 @@ describe('', () => {
         home.getPeople().eq(0).should('be.visible')
         home.getGraph().eq(0).should('be.visible')
         home.getBook().eq(0).should('be.visible')
-
-
     })
+
     And('User Click the "Pen and Paper" Icon', () => {
         home.getPaperAndPen().eq(0).click()
     })
-
 
     And('User Click the "People" Icon', () => {
         home.getPeople().eq(0).click()
@@ -29,7 +27,6 @@ describe('', () => {
     And('User Click the "Graph" Icon', () => {
         home.getGraph().eq(0).click()
     })
-
 
     And('User Click the "Book" Icon Dropdown', () => {
         home.getBook().eq(0).click()

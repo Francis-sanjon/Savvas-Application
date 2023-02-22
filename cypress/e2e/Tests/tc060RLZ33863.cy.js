@@ -12,7 +12,6 @@ describe('', () => {
     Then('User logins Savvas Appllication as Student with valid {string} and valid {string}', (username, password) => {
         bs.savvasLogin(username, password)
     })
-
     Then('User verifies Class name should be displayed on each of my cards', () => {
         home.getClassCardTitle().should('be.visible')
     })
@@ -25,8 +24,6 @@ describe('', () => {
         home.getClassCardImage().should('be.visible')
     })
     Then('User verifies Square class cards is displayed two in a row or not', () => {
-
-        //home.getSquareCard().eq(0).should('have.attr', 'style', 'max-width: 564px;')
         home.getSquareCard().eq(0).invoke('attr', 'style').then((style) => {
             const maxWidthRegex = /max-width:\s*(\d+)px/;
             const matches = style.match(maxWidthRegex);
@@ -40,8 +37,6 @@ describe('', () => {
         profilePage.getStudentsGroups().should('be.visible')
         profilePage.getData().should('be.visible')
         profilePage.getPrograms().should('be.visible')
-
-
     })
     And('User Click the "Pen and Paper" icon', () => {
         profilePage.getAssignments().click()

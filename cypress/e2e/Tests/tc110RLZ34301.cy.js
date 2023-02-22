@@ -49,14 +49,15 @@ describe('', () => {
         profilePage.getHomeMenu().click()
     })
     Then('User verifies username displayed without ellipsis', () => {
-        cy.get('.header__navbar_student').shadow().find('[data-utility-id="profile"]').should('not.have.class', 'profile-name profile-name--hover')
+        //cy.get('.header__navbar_student').shadow().find('[data-utility-id="profile"]').should('not.have.class', 'profile-name profile-name--hover')
+        home.getProfileName().should('not.have.class', 'profile-name profile-name--hover')
     })
 
     And('User clicks Browse Button', () => {
         profilePage.getBrowseMenu().click()
     })
     Then('User verifies username displayed without ellipsis from homepage', () => {
-       home.getEllipsis().should('not.have.class', 'profile-name profile-name--hover')
+        home.getEllipsis().should('not.have.class', 'profile-name profile-name--hover')
     })
     And('User clicks Classes Menu', () => {
         profilePage.getClaasesMenu().click()

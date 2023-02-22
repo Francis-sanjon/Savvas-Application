@@ -29,7 +29,7 @@ describe('', () => {
     cy.wrap(colors).should((colors) => {
       expect(colors).to.deep.equal(colors2);
     });
-})
+  })
   And('User Clicks SignOut button', () => {
     home.getSignOutBtn().click()
     cy.wait(5000)

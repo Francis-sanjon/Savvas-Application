@@ -65,7 +65,7 @@ describe('', () => {
     })
     And('User clicks savvas Realize Icon to go Dashboard page', () => {
         profilePage.getRealizeImg().click()
-})
+    })
     Then('User Verify the below data "Assignments" - as Asignaciones,"Student & Groups" - Estudiantes y grupos,"Data" - Datos,"Programs" - Programas', () => {
         profilePage.getStudentsGroups().then((data) => {
             let value = data.text()

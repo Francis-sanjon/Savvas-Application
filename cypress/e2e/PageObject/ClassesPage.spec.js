@@ -1,5 +1,7 @@
 class ClassesPage{
-
+getActive(){
+  return cy.get('[class="active"]')
+}
     getAssignmentPage(){
         return  cy.get('.sidebar-navigation').shadow().find('[data-label="Assignments"]')
       }
@@ -9,8 +11,9 @@ class ClassesPage{
       getGraphLabel(){
         return cy.get('.sidebar-navigation').shadow().find('[data-label="Data"]')
       }
-      getBookLabel(){
-       
+      getTOC(){
+       return cy.get('.title-bar_title > [tabindex="-1"]')
       }
 }
 export default ClassesPage
+

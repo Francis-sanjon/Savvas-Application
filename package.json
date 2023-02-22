@@ -22,6 +22,7 @@
   "dependencies": {
     "@cypress/webpack-preprocessor": "^5.16.1",
     "cypress-downloadfile": "^1.2.3",
+    "cypress-parallel": "^0.12.0",
     "exceljs": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0"
   },
@@ -52,7 +53,7 @@
   },
   "scripts": {
     "test": "cypress run --config pageLoadTimeout=10000",
-    
-    "html:report": "node cucumber-html-reports.js"
+    "html:report": "node cucumber-html-reports.js",
+    "cy:parallel": "cypress-parallel -s cy:run -t 2 -d cypress/e2e"
   }
 }

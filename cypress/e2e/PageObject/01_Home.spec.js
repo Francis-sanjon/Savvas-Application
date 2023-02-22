@@ -62,7 +62,7 @@ class Home {
   getClassCardImage() {
     return cy.get('[class="classImage"]').eq(1)
   }
-   getClassCardImage1() {
+  getClassCardImage1() {
     return cy.get('[class="classImage"]')
   }
   getClassCardHeader() {
@@ -92,21 +92,38 @@ class Home {
   getMyProgramList() {
     return cy.get('[class="programs-list"]')
   }
-getPaperAndPen(){
-  return cy.get('[data-e2e-id="class-listing-assignments-link"]')
-}
-getPeople(){
-  return cy.get('[data-e2e-id="class-listing-studentsAndGroups-link"]')
-}
-getGraph(){
-  return cy.get('[data-e2e-id="class-listing-data-link"]')
-}
-getBook(){
-  return cy.get('[class="program-dropdown"]')
-}
+  getPaperAndPen() {
+    return cy.get('[data-e2e-id="class-listing-assignments-link"]')
+  }
+  getPeople() {
+    return cy.get('[data-e2e-id="class-listing-studentsAndGroups-link"]')
+  }
+  getGraph() {
+    return cy.get('[data-e2e-id="class-listing-data-link"]')
+  }
+  getBook() {
+    return cy.get('[class="program-dropdown"]')
+  }
+  getBookIcon() {
+    return cy.get('[title="Programs"]')
+  }
+  getScroll() {
+    return cy.get('.d-none')
+  }
 
+  getClassesSubNav() {
+    return cy.get('.header__navbar').shadow().find('[data-id="classes"]')
+  }
+  getClassesPopUp() {
+    return cy.get('[class="clearfix onHoverClass"]')
+  }
+  getClassesCard() {
+    return cy.get('[class="clearfix onHoverClass"]')
+  }
 
-
+  getHomeSize() {
+    return cy.get('[class="h-100 pr-0 className col-10"]')
+  }
 
 
 

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="49.066" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2023-02-22T08:09:55" tests="0" file="cypress\e2e\Features\TC-19_tc160RLZ36970.feature" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="TC-19_Verify clicking on the Square Google class card title navigates to the assignment listing page of that class for Student" timestamp="2023-02-22T08:09:55" tests="1" time="48.886" failures="0">
-    <testcase name="TC-19_Verify clicking on the Square Google class card title navigates to the assignment listing page of that class for Student Verify clicking on the Square Google class card title navigates to the assignment listing page of that class for Student (example #1)" time="43.408" classname="Verify clicking on the Square Google class card title navigates to the assignment listing page of that class for Student (example #1)">
-    </testcase>
-  </testsuite>
-</testsuites>

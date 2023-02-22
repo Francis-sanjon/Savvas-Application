@@ -14,11 +14,8 @@ describe('', () => {
 
     Then('User verifies class picture set on each class card', () => {
         home.getClassCardImage1().should('be.visible')
-
     })
     Then('User verifies rectangular class cards is displayed one in a row or not', () => {
-
-        //home.getRectangularCard().eq(0).should('have.attr', 'style', 'max-width: 1190px;')
         home.getRectangularCard().eq(0).invoke('attr', 'style').then((style) => {
             const maxWidthRegex = /max-width:\s*(\d+)px/;
             const matches = style.match(maxWidthRegex);
@@ -34,19 +31,15 @@ describe('', () => {
         profilePage.getData().should('be.visible')
         profilePage.getPrograms().should('be.visible')
     })
-
     Then('User verifies that link navigated to the Student & Group page for that class or not', () => {
         classesPage.getPeopleLabel().should('be.visible')
     })
-
-
     Then('User verifies that link navigated to the Class Results by Data page for that class or not', () => {
-        cy.get('.sidebar-navigation').shadow().find('[data-label="Data"]').should('be.visible')
+        classesPage.getGraphLabel().should('be.visible')
     })
-
-
     Then('User verifies Dropdown that contains the programs associated with that class should be expanded or not', () => {
-        cy.get('.sidebar-navigation').shadow().find('[data-label="Data"]').should('be.visible')
+        // cy.get('.sidebar-navigation').shadow().find('[data-label="Data"]').should('be.visible')
+        classesPage.getPrograms().should('be.visible')
     })
 
 
