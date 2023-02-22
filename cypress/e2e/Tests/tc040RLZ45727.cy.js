@@ -11,7 +11,9 @@ describe('', () => {
     And('User clicks on any Program in My Program section', () => {
         var randomNumber = Math.floor(Math.random() * 4) + 1;
         cy.log(randomNumber);
-        cy.get('[class="program-row_list_image"]').eq(randomNumber).click()
+        let locat="#"+randomNumber+'-toc-list';
+              // cy.get('[class="program-row_list_image"]').eq(randomNumber).click()
+        cy.get(locat).click()
     })
     Then('User verifies new TOC page is displayed or not', () => {
         cy.get('.title-bar_title > [tabindex="-1"]').then((data) => {

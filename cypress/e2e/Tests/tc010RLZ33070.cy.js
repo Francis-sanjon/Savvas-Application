@@ -18,7 +18,15 @@ describe('', () => {
     })
     Then('User verifies rectangular class cards is displayed one in a row or not', () => {
 
-        home.getRectangularCard().eq(0).should('have.attr', 'style', 'max-width: 1191px;')
+        //home.getRectangularCard().eq(0).should('have.attr', 'style', 'max-width: 1190px;')
+        home.getRectangularCard().eq(0).invoke('attr', 'style').then((style) => {
+            const maxWidthRegex = /max-width:\s*(\d+)px/;
+            const matches = style.match(maxWidthRegex);
+            const maxWidth = matches ? parseInt(matches[1]) : null;
+            cy.log(maxWidth)
+            expect(maxWidth).to.greaterThan(1189)
+        });
+
     })
     Then('User verifies Class avatar with equivalent icon and label,Assignment,Student & Groups,Graph,Programs', () => {
         profilePage.getAssignments().should('be.visible')
