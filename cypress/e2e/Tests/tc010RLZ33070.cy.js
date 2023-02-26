@@ -1,16 +1,14 @@
 
 import { When, And, Then, Given } from "@badeball/cypress-cucumber-preprocessor"
-import BaseClass from "../PageObject/BaseClass.spec";
 import ProfilePage from '../PageObject/ProfilePage.spec';
 import ClassesPage from '../PageObject/ClassesPage.spec'
-import Home from "../PageObject/01_Home.spec";
-const bs = new BaseClass();
+import Home from "../PageObject/Home.spec";
+
 const profilePage = new ProfilePage()
 const classesPage = new ClassesPage()
 const home = new Home()
 
 describe('', () => {
-
 
     Then('User verifies class picture set on each class card', () => {
         home.getClassCardImage1().should('be.visible')
@@ -23,7 +21,6 @@ describe('', () => {
             cy.log(maxWidth)
             expect(maxWidth).to.greaterThan(1189)
         });
-
     })
     Then('User verifies Class avatar with equivalent icon and label,Assignment,Student & Groups,Graph,Programs', () => {
         profilePage.getAssignments().should('be.visible')
@@ -38,7 +35,6 @@ describe('', () => {
         classesPage.getGraphLabel().should('be.visible')
     })
     Then('User verifies Dropdown that contains the programs associated with that class should be expanded or not', () => {
-        // cy.get('.sidebar-navigation').shadow().find('[data-label="Data"]').should('be.visible')
         classesPage.getPrograms().should('be.visible')
     })
 

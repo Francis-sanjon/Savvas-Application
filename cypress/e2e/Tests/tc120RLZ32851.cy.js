@@ -1,6 +1,6 @@
 
 const { Given, When, And, Then } = require("@badeball/cypress-cucumber-preprocessor")
-import Home from '../PageObject/01_Home.spec'
+import Home from '../PageObject/Home.spec'
 import BaseClass from "../PageObject/BaseClass.spec";
 import LoginPage from '../PageObject/LoginPage.spec';
 import ProfilePage from '../PageObject/ProfilePage.spec'
@@ -9,6 +9,16 @@ const home = new Home();
 const bs = new BaseClass();
 const loginPage = new LoginPage()
 const profilePage = new ProfilePage()
+
+before('Before', () => {
+  cy.log('this is before block')
+  cy.task('readXlsx', { file: 'cypress/fixtures/excelData.xlsx', sheet: "Sheet1" }).then((rows) => {
+    let rowsLength = rows.length;
+    cy.writeFile("cypress/fixtures/xlsxData.json", { rows })
+
+  })
+})
+
 describe('', () => {
   Given("User launche the Realize login Page", () => {
     cy.visit('/')
@@ -18,7 +28,7 @@ describe('', () => {
   })
   When("User logins Savvas Appllication with valid {string} and valid {string}", async (username, password) => {
     bs.savvasLogin(username, password)
-  })
+      })
   Then('User verifies the Realize Dashboard Page', () => {
     cy.url().should('include', 'dashboard');
   })

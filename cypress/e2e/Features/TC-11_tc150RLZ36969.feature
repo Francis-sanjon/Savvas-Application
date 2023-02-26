@@ -2,7 +2,7 @@
 Feature: TC-11_Verify clicking on the Rectangular Google class card title navigates to the assignment listing page of that class for Student
 
     Scenario Outline:Verify clicking on the Rectangular Google class card title navigates to the assignment listing page of that class for Student
-         Given User launche the Realize login Page
+        Given User launche the Realize login Page
         When User logins Savvas Appllication as Google Student with valid '<username>' and valid '<password>'
         Then User verifies the Realize Dashboard Page
         And User Mouse hover on the class card title
@@ -14,5 +14,5 @@ Feature: TC-11_Verify clicking on the Rectangular Google class card title naviga
         Then User verifies which nagating to assignment listing page
 
         Examples:
-            | username                               | password    |
-            | autostuddashon01@gedu-demo-pearson.com | testing123$ |
+            | username                               | password                                     |
+            | autostuddashon01@gedu-demo-pearson.com | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

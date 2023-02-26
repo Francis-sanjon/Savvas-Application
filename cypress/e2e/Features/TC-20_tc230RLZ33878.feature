@@ -17,5 +17,5 @@ Feature: TC-12_Verify tooltip displayed for square class card quicklinks
         Then User verifies Tooltip message 'Programs' is displayed or not
 
         Examples:
-            | username                      | password                                     |
-            | MSuite49win10chrome_teacher06 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |
+            | username             | password                                     |
+            | EBPlusTeachDashbon01 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

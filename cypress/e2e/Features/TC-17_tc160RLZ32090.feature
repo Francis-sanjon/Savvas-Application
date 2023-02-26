@@ -9,5 +9,5 @@ Feature: TC-17_Verify logged in avatar icon and username are displayed in top na
 
 
         Examples:
-            | username                                             | password    |
-            | schstfusername_10000000000000000000@a7nplusdistrict3 | testing123$ |
+            | username                                             | password                                     |
+            | schstfusername_10000000000000000000@a7nplusdistrict3 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

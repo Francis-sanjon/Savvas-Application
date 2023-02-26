@@ -19,9 +19,9 @@ Feature: TC-06_ Verify rectangular class card for teacher user(Users with 3 or l
     And User Click the "Graph" icon
     Then User verifies that link navigated to the Class Results by Data page for that class or not
     And User navigating to home page
-     And User Click the "Book" icon Dropdown
+    And User Click the "Book" icon Dropdown
     Then User verifies Dropdown that contains the programs associated with that class should be expanded or not
 
     Examples:
-      | username                      | password    |
-      | MSuite49win10chrome_teacher05 | testing123$ |
+      | username                      | password                                     |
+      | MSuite49win10chrome_teacher05 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

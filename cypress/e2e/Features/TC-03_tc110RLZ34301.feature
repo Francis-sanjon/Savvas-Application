@@ -24,4 +24,4 @@ Feature: TC-03_Verify the UserName displayed on the profile shows the first name
 
     Examples:
       | username                | password    |
-      | stud1_test01            | testing123$ |
+      | stud1_test01            | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

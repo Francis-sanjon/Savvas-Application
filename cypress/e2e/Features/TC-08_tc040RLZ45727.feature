@@ -11,4 +11,4 @@ Feature: TC-08_Verify new TOC page is displayed while clicking on any program in
 
         Examples:
             | username       | password   |
-            | realize_admin2 | savvas@123 |
+            | realize_admin2 | U2FsdGVkX1+tcLNbny9dXLr80afxEkghT6dJd5adtGg= |

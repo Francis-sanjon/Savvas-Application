@@ -47,6 +47,11 @@ class ProfilePage {
    getEllipsis(){
       return cy.get('.header__navbar_student').shadow().find('[data-utility-id="profile"]')
    }
-
+   getMessages(){
+return cy.get('.message-container')
+   }
+getProfileName(){
+   return cy.get('.header__navbar').shadow().find('.profile-name')
+}
 }
 export default ProfilePage

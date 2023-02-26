@@ -16,5 +16,5 @@ Feature: TC-13_Verify Class card Header background colour should persist between
         And User Clicks SignOut button
 
         Examples:
-            | username                      | password    |
-            | MSuite49win10chrome_teacher04 | testing123$ |
+            | username                      | password                                     |
+            | MSuite49win10chrome_teacher04 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

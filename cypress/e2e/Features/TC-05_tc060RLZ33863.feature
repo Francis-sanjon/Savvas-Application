@@ -24,5 +24,5 @@ Feature: TC-05_Verify square class card for Student user(Users with 4 or more cl
 
 
         Examples:
-            | username                      | password    |
-            | MSuite49win10chrome_teacher05 | testing123$ |
+            | username                      | password                                     |
+            | MSuite49win10chrome_teacher05 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

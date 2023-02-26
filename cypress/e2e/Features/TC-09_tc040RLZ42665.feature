@@ -13,5 +13,5 @@ Feature: TC-09_Verify new class details page is not displayed with new UI
         Then User verifies new class details page is not displayed
 
         Examples:
-            | username              | password    |
-            | teacher_noclasslist01 | testing123$ |
+            | username              | password                                     |
+            | teacher_noclasslist01 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

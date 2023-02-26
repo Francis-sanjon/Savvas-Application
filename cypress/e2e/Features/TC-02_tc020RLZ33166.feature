@@ -43,5 +43,5 @@ Feature:TC-02_Verify class quick links in Realize Dashboard for spanish user
         And User SignOut the Savvas Appllication
 
         Examples:
-            | username                     | password    | username1                    | password1   |
-            | Msuite49_Dontdisturbteaher01 | testing123$ | Msuite49_Dontdisturbteaher01 | testing123$ |
+            | username                     | password                                     | username1                    | password1                                    |
+            | Msuite49_Dontdisturbteaher01 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= | Msuite49_Dontdisturbteaher01 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

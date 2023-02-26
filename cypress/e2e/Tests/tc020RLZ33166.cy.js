@@ -1,6 +1,6 @@
 const { Given, When, And, Then } = require("@badeball/cypress-cucumber-preprocessor")
 
-import Home from '../PageObject/01_Home.spec'
+import Home from '../PageObject/Home.spec'
 import ProfilePage from '../PageObject/ProfilePage.spec'
 import BaseClass from "../PageObject/BaseClass.spec";
 
@@ -33,7 +33,8 @@ describe('', () => {
                 profilePage.getEnglish().click()
 
                 profilePage.getSaveBtn().click()
-                cy.get('.message-container').then((data) => {
+               // cy.get('.message-container').then((data) => {
+                profilePage.getMessages().then((data) => {
                     let msg = data.text();
                     cy.log(msg)
                 })
@@ -59,9 +60,8 @@ describe('', () => {
         cy.get('.message-container').then((data) => {
             let msg = data.text();
             cy.log(msg)
-        })
-        // cy.get('[data-e2e-id="ok"]').click()       
-        cy.wait(15000)
+        })      
+        cy.wait(8000)
     })
     And('User clicks savvas Realize Icon to go Dashboard page', () => {
         profilePage.getRealizeImg().click()

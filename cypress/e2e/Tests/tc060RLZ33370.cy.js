@@ -1,9 +1,6 @@
 
-
-import { When, And, Then, Given } from "@badeball/cypress-cucumber-preprocessor"
-import BaseClass from "../PageObject/BaseClass.spec";
-import Home from "../PageObject/01_Home.spec";
-const bs = new BaseClass();
+import { And, Then} from "@badeball/cypress-cucumber-preprocessor"
+import Home from "../PageObject/Home.spec";
 const home = new Home()
 
 
@@ -31,8 +28,6 @@ describe('', () => {
     And('User Click the "Book" Icon Dropdown', () => {
         home.getBook().eq(0).click()
     })
-
-
 
 })
 

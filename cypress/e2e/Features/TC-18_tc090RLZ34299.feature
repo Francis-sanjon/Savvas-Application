@@ -21,5 +21,5 @@ Feature: TC-18_Verify the UserName displayed on the profile shows the first name
 
 
     Examples:
-      | username                | password    |
-      | DashboardSuite49_stud01 | testing123$ |
+      | username                | password                                     |
+      | DashboardSuite49_stud01 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

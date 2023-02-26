@@ -9,5 +9,5 @@ Feature: TC-07_Verify scroll bar is displaying for My Programs section if the sc
         Then User Verify if scroll bar is not displayed in My Programs section
 
         Examples:
-            | username          | password    |
-            | rght149390_stud05 | testing123$ |
+            | username          | password                                     |
+            | rght149390_stud05 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

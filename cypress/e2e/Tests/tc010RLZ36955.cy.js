@@ -1,5 +1,5 @@
 import { When, And, Then, Given } from "@badeball/cypress-cucumber-preprocessor"
-import Home from "../PageObject/01_Home.spec";
+import Home from "../PageObject/Home.spec";
 import 'cypress-real-events';
 import BaseClass from "../PageObject/BaseClass.spec";
 import ClassesPage from '../PageObject/ClassesPage.spec'

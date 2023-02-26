@@ -24,5 +24,5 @@ Feature: TC-14_Verify square class card for EB Auto teacher user (Users with 4 o
 
 
         Examples:
-            | username                      | password    |
-            | MSuite49win10chrome_teacher04 | testing123$ |
+            | username                      | password                                     |
+            | MSuite49win10chrome_teacher04 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

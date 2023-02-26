@@ -25,4 +25,4 @@ Feature: TC-15_Verify square class card for teacher user(Users with 4 or more cl
 
         Examples:
             | username                      | password    |
-            | MSuite49win10chrome_teacher06 | testing123$ |
+            | MSuite49win10chrome_teacher06 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

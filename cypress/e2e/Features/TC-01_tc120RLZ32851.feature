@@ -33,5 +33,5 @@ Feature: TC-01_Verify the Help Icon Updated with latest styles in Dashboard Page
     Then User verifies the url for Contact a Program Specialist
 
     Examples:
-      | username                      | password    |
-      | MSuite49win10chrome_teacher04 | testing123$ |
+      | username                      | password                                     |
+      | MSuite49win10chrome_teacher04 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

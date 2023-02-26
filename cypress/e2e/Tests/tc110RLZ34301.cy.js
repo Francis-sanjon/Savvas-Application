@@ -1,7 +1,7 @@
 import { When, And, Then, Given } from "@badeball/cypress-cucumber-preprocessor"
 import LoginPage from "../PageObject/LoginPage.spec";
 import BaseClass from "../PageObject/BaseClass.spec";
-import Home from "../PageObject/01_Home.spec";
+import Home from "../PageObject/Home.spec";
 import ProfilePage from '../PageObject/ProfilePage.spec'
 
 const bs = new BaseClass();
@@ -49,10 +49,9 @@ describe('', () => {
         profilePage.getHomeMenu().click()
     })
     Then('User verifies username displayed without ellipsis', () => {
-        //cy.get('.header__navbar_student').shadow().find('[data-utility-id="profile"]').should('not.have.class', 'profile-name profile-name--hover')
+       
         home.getProfileName().should('not.have.class', 'profile-name profile-name--hover')
     })
-
     And('User clicks Browse Button', () => {
         profilePage.getBrowseMenu().click()
     })
@@ -62,7 +61,6 @@ describe('', () => {
     And('User clicks Classes Menu', () => {
         profilePage.getClaasesMenu().click()
     })
-
     And('User clicks Grades Menu', () => {
         profilePage.getGradesMenu().click()
     })

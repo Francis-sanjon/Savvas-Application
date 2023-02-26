@@ -18,4 +18,4 @@ Feature: TC-16_Verify the Help Icon Updated with latest styles in Dashboard Page
         
         Examples:
             | username     | password    |
-            | stud2_test02 | testing123$ |
+            | stud2_test02 | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

@@ -13,5 +13,5 @@ Feature: TC-19_Verify clicking on the Square Google class card title navigates t
         Then User verifies which nagating to assignment listing page
 
         Examples:
-            | username                               | password    |
-            | autostuddashon02@gedu-demo-pearson.com | testing123$ |
+            | username                               | password                                     |
+            | autostuddashon02@gedu-demo-pearson.com | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |

@@ -15,5 +15,5 @@ Feature: TC-04_Verify clicking on the Rectangular class card title navigates to 
 
         Examples:
             | username                               | password    |
-            | stud1_test01                           | testing123$ |
+            | stud1_test01                           | U2FsdGVkX18yfjLO6h90476D0vJgs5VzTunWdRnHut8= |
            

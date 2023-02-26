@@ -5,14 +5,26 @@ class Home {
   getHelpIcon() {
     return cy.get('.header__navbar').shadow().find('[data-utility-id="help"]').eq(0)
   }
+  getHelpIconStd() {
+    return cy.get('.header__navbar_student').shadow().find('[data-utility-id="help"]')
+  }
   getHelpIconColor() {
     return cy.get('.header__navbar').shadow().find('[data-utility-id="help"]').eq(0).shadow().find('[class="icon-button center"]')
+  }
+  getHelpIconColorStd() {
+    return cy.get('.header__navbar_student').shadow().find('[data-utility-id="help"]').eq(0).shadow().find('[class="icon-button center"]')
   }
   getPopUp() {
     return cy.get('.header__navbar').shadow().find('.help-search-container')
   }
+  getPopUpStd() {
+    return cy.get('.header__navbar_student').shadow().find('.help-search-container')
+  }
   getInputBox() {
     return cy.get('.header__navbar').shadow().find('[data-field-placeholder="Search Help"]').shadow().find('[placeholder="Search Help"]')
+  }
+  getInputBoxStd() {
+    return cy.get('.header__navbar_student').shadow().find('[data-field-placeholder="Search Help"]').shadow().find('[placeholder="Search Help"]')
   }
   getHelpForThisPage() {
     return cy.get('.header__navbar').shadow().find('[class="help-item-a"]').eq(0)
@@ -110,7 +122,6 @@ class Home {
   getScroll() {
     return cy.get('.d-none')
   }
-
   getClassesSubNav() {
     return cy.get('.header__navbar').shadow().find('[data-id="classes"]')
   }
@@ -120,27 +131,18 @@ class Home {
   getClassesCard() {
     return cy.get('[class="clearfix onHoverClass"]')
   }
-
   getHomeSize() {
     return cy.get('[class="h-100 pr-0 className col-10"]')
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  getLoginAvatar() {
+    return cy.get('.header__navbar').shadow().find('.avatar')
+  }
+  getClassResolution() {
+    return cy.get('.classAssignmentLink > div.h-100')
+  }
+  getFloating() {
+    return cy.get('.floatingModal')
+  }
 
 
 }
